@@ -1,5 +1,6 @@
 #pragma once
 #include "irrlicht.h"
+#include "OBB.h"
 using namespace irr;
 
 using namespace core;
@@ -14,6 +15,6 @@ class Collision
 public:
 	Collision();
 	~Collision();
-	bool Collision::CheckCameraCollision(ICameraSceneNode * one, ISceneNode * two);
+	bool CheckCameraCollision(ICameraSceneNode * one, ISceneNode * two);
+	float ComputeRadius(IMeshSceneNode * node);
 };
-
