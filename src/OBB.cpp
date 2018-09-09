@@ -20,8 +20,8 @@ OBB::OBB(vector3d<f32> minValue, vector3d<f32> maxValue, vector3d<f32> rotation)
 	quaternion quatRotation(rotation);
 	Rotation = quatRotation;
 	CenterPoint.X = (MaxValue.X - MinValue.X) / 2;
-	CenterPoint.Y = (MaxValue.X - MinValue.X) / 2;
-	CenterPoint.Z = (MaxValue.X - MinValue.X) / 2;
+	CenterPoint.Y = (MaxValue.Y - MinValue.Y) / 2;
+	CenterPoint.Z = (MaxValue.Z - MinValue.Z) / 2;
 }
 
 OBB::~OBB()
