@@ -34,11 +34,11 @@ bool Collision::CheckCameraCollision(ICameraSceneNode * one, ISceneNode * two)
 
 float Collision::ComputeRadius(IMeshSceneNode * node)
 {
-	IMesh * mesh = node->getMesh();
-	for (int i = 0; i < mesh->getMeshBufferCount(); i++)
-	{
-		IMeshBuffer * buffer = mesh->getMeshBuffer(i);
-		void * vertBuffer = buffer->getVertices();
-	}
-	return 0;
+	aabbox3d<f32> box = node->getBoundingBox();
+
+	float distX = box.MaxEdge.X - box.MinEdge.X;
+	float distY = box.MaxEdge.Y - box.MaxEdge.Y;
+	float distZ = box.MaxEdge.Z - box.MaxEdge.Z;
+
+	return max_<float>(distX, max_<float>(distY, distZ)) / 2;
 }
