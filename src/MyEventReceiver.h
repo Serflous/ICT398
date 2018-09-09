@@ -159,9 +159,24 @@ public:
 						rect<s32>(100 + Context.counter, 100 + Context.counter, 300 + Context.counter, 200 + Context.counter),
 						false, // modal?
 						L"Test window");
-
-					env->addStaticText(L"Please close me",
+					stringw tmp = L"X: ";
+					tmp += Context.device->getSceneManager()->getActiveCamera()->getBoundingBox().getCenter().X;
+					env->addStaticText(tmp.c_str(),
 						rect<s32>(35, 35, 140, 50),
+						true, // border?
+						false, // wordwrap?
+						window);
+					tmp = L"Y: ";
+					tmp += Context.device->getSceneManager()->getActiveCamera()->getBoundingBox().getCenter().Y;
+					env->addStaticText(tmp.c_str(),
+						rect<s32>(35, 55, 140, 70),
+						true, // border?
+						false, // wordwrap?
+						window);
+					tmp = L"Z: ";
+					tmp += Context.device->getSceneManager()->getActiveCamera()->getBoundingBox().getArea();
+					env->addStaticText(tmp.c_str(),
+						rect<s32>(35, 75, 140, 90),
 						true, // border?
 						false, // wordwrap?
 						window);
