@@ -37,8 +37,8 @@ float Collision::ComputeRadius(IMeshSceneNode * node)
 	aabbox3d<f32> box = node->getBoundingBox();
 
 	float distX = box.MaxEdge.X - box.MinEdge.X;
-	float distY = box.MaxEdge.Y - box.MaxEdge.Y;
-	float distZ = box.MaxEdge.Z - box.MaxEdge.Z;
+	float distY = box.MaxEdge.Y - box.MinEdge.Y;
+	float distZ = box.MaxEdge.Z - box.MinEdge.Z;
 
 	return max_<float>(distX, max_<float>(distY, distZ)) / 2;
 }
