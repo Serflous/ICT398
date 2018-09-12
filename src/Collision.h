@@ -16,5 +16,6 @@ public:
 	Collision();
 	~Collision();
 	bool CheckCameraCollision(ICameraSceneNode * one, ISceneNode * two);
+	bool BoxCollision(ISceneNode* one, aabbox3df two);
 	float ComputeRadius(IMeshSceneNode * node);
 };

@@ -32,6 +32,19 @@ bool Collision::CheckCameraCollision(ICameraSceneNode * one, ISceneNode * two)
 	return b1.intersectsWithBox(b2);
 }
 
+bool Collision::BoxCollision(ISceneNode* one, aabbox3df two) {
+	aabbox3d<f32> b1, b2;
+
+	b1 = one->getBoundingBox();
+	b2 = two;
+
+	one->getRelativeTransformation().transformBoxEx(b1);
+
+	
+	return b1.intersectsWithBox(b2);
+}
+
+
 float Collision::ComputeRadius(IMeshSceneNode * node)
 {
 	aabbox3d<f32> box = node->getBoundingBox();

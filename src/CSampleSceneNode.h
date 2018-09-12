@@ -32,6 +32,11 @@ public:
 		Material.Wireframe = true;
 		Material.Lighting = false;
 
+		//Vertices[0] = vert1;
+		//Vertices[1] = vert2;
+		//Vertices[2] = vert3;
+		//Vertices[3] = vert4;
+
 		Vertices[0] = video::S3DVertex(10, 0, 10, 1, 1, 0,
 			video::SColor(0, 0, 0, 0), 0, 1);
 		Vertices[1] = video::S3DVertex(20, 0, -10, 1, 0, 0,
