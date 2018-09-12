@@ -87,7 +87,7 @@ public:
 
 						Context.device->getCursorControl()->setVisible(false);
 						ICameraSceneNode * curCam = Context.device->getSceneManager()->getActiveCamera();
-						ICameraSceneNode * newCam = Context.device->getSceneManager()->addCameraSceneNodeFPS(0, 100, 0.5f, -1, keyMap, 8);
+						ICameraSceneNode * newCam = Context.device->getSceneManager()->addCameraSceneNodeFPS(0, 100, 0.05f, -1, keyMap, 8);
 						newCam->setPosition(vector3df(curCam->getAbsolutePosition().X, curCam->getAbsolutePosition().Y, curCam->getAbsolutePosition().Z));
 						newCam->setTarget(vector3df(curCam->getTarget().X, curCam->getTarget().Y, curCam->getTarget().Z));
 						Context.device->getSceneManager()->setActiveCamera(newCam);
