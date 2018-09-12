@@ -4,7 +4,3 @@
 
 
 
-
-NewSceneNode::~NewSceneNode()
-{
-}

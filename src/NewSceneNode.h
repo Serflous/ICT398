@@ -35,7 +35,6 @@ public:
 			Box2.addInternalPoint(Vertices2[i].Pos);
 
 	}
-	~NewSceneNode();
 
 	virtual void OnRegisterSceneNode()
 	{
