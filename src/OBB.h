@@ -1,3 +1,7 @@
+/*
+* @Author Matt C
+*/
+
 #pragma once
 #include "irrlicht.h"
 

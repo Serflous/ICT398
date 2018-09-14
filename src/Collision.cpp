@@ -1,5 +1,9 @@
-#include "Collision.h"
 
+/*
+* @Author Mason Tolman
+*/
+
+#include "Collision.h"
 
 
 Collision::Collision()

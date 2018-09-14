@@ -1,3 +1,7 @@
+/*
+* @Author Mason Tolman
+*/
+
 #pragma once
 #include <irrlicht.h>
 #include "driverChoice.h"
@@ -9,6 +13,7 @@ using namespace scene;
 using namespace video;
 using namespace io;
 using namespace gui;
+
 
 struct SAppContext
 {
@@ -34,6 +39,12 @@ public:
 	
 	SKeyMap keyMap[8];
 
+	bool CHECKER = false;
+
+	bool getChecker()
+	{
+		return CHECKER;
+	}
 
 	// This is used to check whether a key is being held down
 	virtual bool IsKeyDown(EKEY_CODE keyCode) const
@@ -85,6 +96,13 @@ public:
 					if (Context.device->getCursorControl()->isVisible())
 					{
 
+						//video::ITexture* images = Context.device->getVideoDriver()->getTexture("res/picture/SplashScreen.png");
+						////Context.device->getVideoDriver()->makeColorKeyTexture(images, core::position2d<s32>(0, 0));
+						//Context.device->getVideoDriver()->getMaterial2D().TextureLayer[0].BilinearFilter = true;
+						//Context.device->getVideoDriver()->getMaterial2D().AntiAliasing = video::EAAM_FULL_BASIC;
+						////Context.device->getVideoDriver()->enableMaterial2D();
+						//Context.device->getVideoDriver()->draw2DImage(images, core::position2d<s32>(500, 500));
+
 						Context.device->getCursorControl()->setVisible(false);
 						ICameraSceneNode * curCam = Context.device->getSceneManager()->getActiveCamera();
 						ICameraSceneNode * newCam = Context.device->getSceneManager()->addCameraSceneNodeFPS(0, 100, 0.05f, -1, keyMap, 8);
@@ -94,7 +112,7 @@ public:
 						Context.device->getGUIEnvironment()->saveGUI(L"gui", 0);
 						Context.device->getGUIEnvironment()->clear();
 
-
+						CHECKER = false;
 						OnceDone = true;
 					}
 					else
@@ -107,7 +125,7 @@ public:
 						//Context.device->getSceneManager()->setActiveCamera;
 						
 						Context.device->getGUIEnvironment()->loadGUI(L"gui", 0);
-
+						CHECKER = true;
 						OnceDone = true;
 					}
 				}

@@ -1,3 +1,7 @@
+/*
+* @Author Mason Tolman
+*/
+
 #pragma once
 #include "irrlicht.h"
 #include "MyEventReceiver.h"

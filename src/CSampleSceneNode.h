@@ -1,3 +1,7 @@
+/*
+* @Author Mason Tolman
+*/
+
 #pragma once
 //custom scene node, important for creating our engine.
 #include "irrlicht.h"
@@ -16,6 +20,8 @@ using namespace video;
 using namespace io;
 using namespace gui;
 using namespace std;
+
+
 
 class CSampleSceneNode : public ISceneNode
 {

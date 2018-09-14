@@ -1,3 +1,6 @@
+/*
+* @Author Matt C
+*/
 #include "OBB.h"
 
 OBB::OBB()
@@ -13,7 +16,7 @@ OBB::OBB(const OBB & other)
 	CenterPoint = other.CenterPoint;
 }
 
-OBB::OBB(vector3d<f32> minValue, vector3d<f32> maxValue, vector3d<f32> rotation)
+OBB::OBB(vector3d<f32> minValue, vector3d<f32> maxValue, vector3d<f32> rotation) 
 {
 	MinValue = minValue;
 	MaxValue = maxValue;

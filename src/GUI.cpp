@@ -1,3 +1,7 @@
+/*
+* @Author Mason Tolman
+*/
+
 #include "GUI.h"
 
 GUI::GUI(IGUIEnvironment * env, IrrlichtDevice * device)

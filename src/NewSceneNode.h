@@ -1,3 +1,7 @@
+/*
+* @Author Mason Tolman
+*/
+
 #include "irrlicht.h"
 
 #include <iostream>
