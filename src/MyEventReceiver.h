@@ -58,6 +58,10 @@ public:
 
 		
 		bool OnceDone = false;
+		if (event.EventType == irr::EET_MOUSE_INPUT_EVENT) {
+			if (event.MouseInput.isLeftPressed() && CHECKER)
+				Context.device->closeDevice();
+		} 
 		if (event.EventType == irr::EET_KEY_INPUT_EVENT) {
 			if (!event.KeyInput.PressedDown)
 			{
@@ -136,6 +140,7 @@ public:
 				default:
 					break;
 				}
+
 			}
 			KeyIsDown[event.KeyInput.Key] = event.KeyInput.PressedDown;
 		}
